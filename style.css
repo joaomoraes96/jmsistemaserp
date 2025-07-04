@@ -35,9 +35,15 @@ body {
 }
 
 /* Ícones de Contato */
+
+.contact-icon.fas.fa-home:hover {
+    color: #FFA500; /* Laranja para o ícone home */
+}
+
+
 .contact-icons {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .contact-icon {
