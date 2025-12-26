@@ -8,59 +8,71 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-
 </head>
 <body>
-    <!-- Header com Logo e Botão WhatsApp -->
+    <!-- Header -->
     <header id="inicio">
         <div class="header-container">
             <div class="logo-container">
                 <img src="assets/images/logosemfundo.png" alt="JM Sistemas e Consultoria ERP" class="logo">
             </div>
             
-            <!-- Menu de Navegação para Desktop -->
             <nav class="desktop-nav">
                 <a href="#servicos">Serviços</a>
+                <a href="#delivery">Delivery</a>
                 <a href="#diferenciais">Diferenciais</a>
                 <a href="#contato">Contato</a>
             </nav>
             
-            <!-- Menu Hamburger para Mobile -->
             <div class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
         
-        <!-- Menu Mobile (expandido) -->
         <nav class="mobile-nav">
             <a href="#servicos">Serviços</a>
+            <a href="#delivery">Delivery</a>
             <a href="#diferenciais">Diferenciais</a>
             <a href="#contato">Contato</a>
         </nav>
     </header>
 
-    <!-- Botão WhatsApp Flutuante -->
-    <a href="https://wa.me/5582996834837?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20sistema%3F" class="floating-whatsapp">
+    <!-- WhatsApp Flutuante -->
+    <a href="https://wa.me/message/GL73J2GZFYFAN1" class="floating-whatsapp">
         <i class="fab fa-whatsapp"></i>
     </a>
-
-    <!-- Foto de Perfil Circular -->
-    <div class="profile-pic-container">
-        <img src="assets/images/seu-perfil.jpg" alt="João Moraes - Especialista em ERP" class="profile-pic">
-    </div>
 
     <!-- Seção Hero -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Transforme sua gestão empresarial</h1>
-                <p>Sou <strong>João Moraes</strong>, formado em Análise e Desenvolvimento de Sistemas, especialista em sistemas ERP com mais de 7 anos de experiência. Ofereço soluções completas para otimizar processos, aumentar a eficiência e impulsionar seus resultados.</p>
-                <a href="https://wa.me/5582996834837?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20sistema%3F" class="btn-whatsapp pulse">
-                    <i class="fab fa-whatsapp"></i> FALE COMIGO AGORA
-                </a>
+                <h1>Soluções em <span class="highlight">SISTEMAS</span> que impulsionam o crescimento do seu negócio</h1>
+                <p>A <strong>JM Sistemas</strong> oferece soluções completas de gestão integrada para otimizar processos, aumentar eficiência e impulsionar resultados. Mais de 7 anos de experiência em consultoria e implementação de sistemas ERP.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/message/GL73J2GZFYFAN1" class="btn-whatsapp pulse">
+                        <i class="fab fa-whatsapp"></i> FALE COM UM ESPECIALISTA
+                    </a>
+                    <a href="#servicos" class="btn-secondary">
+                        <i class="fas fa-chart-line"></i> CONHEÇA NOSSAS SOLUÇÕES
+                    </a>
+                </div>
             </div>
             <div class="hero-image">
-                <img src="assets/images/erp-dashboard.gif" alt="Dashboard ERP - Sistema de gestão integrada">
+                <!-- Computador com tela do sistema -->
+                <div class="computer-device">
+                    <div class="computer-monitor">
+                        <div class="computer-screen">
+                            <div class="screen-content">
+                                <!-- Aqui você pode colocar uma imagem do seu sistema -->
+                                <img src="assets/images/fundosistema.jpg" alt="Dashboard do Sistema ERP - JM Sistemas" class="system-screenshot">
+                            </div>
+                        </div>
+                        <div class="monitor-frame">
+                            <div class="monitor-stand"></div>
+                            <div class="monitor-base"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -68,69 +80,204 @@
     <!-- Seção Serviços -->
     <section class="services" id="servicos">
         <div class="container">
-            <h2>Nossas Soluções <span class="highlight">Completas</span></h2>
+            <div class="section-header">
+                <h2>Soluções <span class="highlight">Completas</span> para sua Empresa</h2>
+                <p>Oferecemos um portfólio completo de sistemas para otimizar sua gestão empresarial</p>
+            </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
                     <h3>ERP Completo</h3>
-                    <p>Gestão integrada de vendas, estoque, finanças, relatórios e mais.</p>
+                    <p>Gestão integrada de vendas, estoque, finanças, compras, relatórios e controle total do negócio.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-file-invoice-dollar"></i>
                     </div>
                     <h3>Emissão Fiscal</h3>
-                    <p>NFC-e, NFe, CT-e, MDF-e e SPED.</p>
+                    <p>NFC-e, NFe, CT-e, MDF-e, SPED Fiscal e Contábil totalmente integrado ao seu ERP.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-cash-register"></i>
                     </div>
-                    <h3>Frente de Loja</h3>
-                    <p>PDV integrado com emissão de cupons.</p>
+                    <h3>PDV Completo</h3>
+                    <p>Sistema de frente de caixa com emissão de cupons, controle de sangrias e fechamento de caixa.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-calculator"></i>
                     </div>
                     <h3>Área do Contador</h3>
-                    <p>Envio de XML e relatórios fiscais automatizados.</p>
+                    <p>Envio automático de XML, relatórios fiscais e integração completa com escritórios contábeis.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-globe"></i>
                     </div>
-                    <h3>Sites para Lojas</h3>
-                    <p>Desenvolvimento de sites profissionais e otimizados para e-commerce.</p>
+                    <h3>E-commerce & Sites</h3>
+                    <p>Desenvolvimento de sites profissionais e lojas virtuais integradas ao seu sistema de gestão.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>Consultoria</h3>
-                    <p>Análise e implementação de melhorias nos processos da sua empresa.</p>
+                    <p>Análise de processos, implementação de melhorias e treinamento especializado para sua equipe.</p>
                 </div>
             </div>
         </div>
     </section>
 
+<!-- Nova Seção: Sistema de Delivery -->
+<section class="delivery-system" id="delivery">
+    <div class="container">
+        <div class="delivery-content">
+            <div class="delivery-text">
+                <div class="section-header">
+                    <h2>Sistema de <span class="highlight">Delivery</span> Integrado</h2>
+                    <p>Gerencie pedidos de delivery diretamente do seu ERP com integração ao sistema de delivery Pedir Menu</p>
+                </div>
+                
+                <div class="delivery-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Aplicativo Proprietário</h4>
+                            <p>App personalizado com a identidade da sua empresa disponível nas lojas de aplicativos.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Integração Total</h4>
+                            <p>Pedidos entram automaticamente no sistema, sem necessidade de digitação manual.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Rastreamento em Tempo Real</h4>
+                            <p>Acompanhe a localização do entregador e tempo estimado de entrega.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Pagamentos Online</h4>
+                            <p>Múltiplas formas de pagamento com integração às principais operadoras.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="https://wa.me/5582996834837?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20sistema%20de%20delivery%3F" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> SABER MAIS SOBRE DELIVERY
+                </a>
+            </div>
+            
+            <div class="delivery-image">
+                <div class="mobile-device">
+                    <div class="mobile-screen">
+                        <div class="delivery-iframe-container">
+                            <!-- IFRAME com o site real -->
+                            <iframe src="https://preview.pedir.menu/" 
+                                    class="delivery-iframe" 
+                                    title="Preview do Sistema de Delivery"
+                                    loading="lazy"
+                                    sandbox="allow-scripts allow-same-origin">
+                            </iframe>
+                            <!-- Overlay com link -->
+                            <div class="iframe-overlay">
+                                <a href="https://preview.pedir.menu/" target="_blank" rel="noopener">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>Clique para ver em tela cheia</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-frame">
+                        <div class="mobile-notch"></div>
+                        <div class="mobile-button"></div>
+                    </div>
+                </div>
+                <button class="fullscreen-button" id="openDeliveryModal">
+                    <i class="fas fa-expand"></i> Visualizar em tela cheia
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal para visualização em tela cheia -->
+<div class="delivery-modal" id="deliveryModal">
+    <div class="delivery-modal-content">
+        <div class="delivery-modal-header">
+            <h3><i class="fas fa-mobile-alt"></i> Preview do Sistema de Delivery</h3>
+            <button class="close-modal" id="closeDeliveryModal">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <iframe src="https://preview.pedir.menu/" 
+                class="delivery-modal-iframe" 
+                title="Sistema de Delivery - JM Sistemas"
+                allowfullscreen>
+        </iframe>
+    </div>
+</div>
+
     <!-- Seção Diferenciais -->
     <section class="features" id="diferenciais">
         <div class="container">
-            <div class="features-content">
+            <div class="section-header">
                 <h2>Por que escolher a <span class="highlight">JM Sistemas</span>?</h2>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> Consultoria personalizada para seu negócio</li>
-                    <li><i class="fas fa-check-circle"></i> Suporte técnico ágil e especializado</li>
-                    <li><i class="fas fa-check-circle"></i> Sistemas sempre atualizados conforme legislação</li>
-                    <li><i class="fas fa-check-circle"></i> Integração completa entre todos os departamentos</li>
-                    <li><i class="fas fa-check-circle"></i> Relatórios precisos para tomada de decisão</li>
-                </ul>
+                <p>Diferenciais que fazem a diferença na gestão do seu negócio</p>
             </div>
-            <div class="features-image">
-                <img src="assets/images/telasistema.png" alt="Sistema de gestão para lojas">
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h3>Consultoria Especializada</h3>
+                    <p>Análise personalizada do seu negócio com soluções sob medida para sua realidade.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Suporte Dedicado</h3>
+                    <p>Equipe técnica especializada disponível para resolver suas dúvidas e problemas.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Conformidade Fiscal</h3>
+                    <p>Sistemas sempre atualizados conforme as últimas mudanças na legislação.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Relatórios Inteligentes</h3>
+                    <p>Dashboards e relatórios precisos para tomada de decisão estratégica.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -138,11 +285,14 @@
     <!-- Seção de Depoimentos -->
     <section class="testimonials">
         <div class="container">
-            <h2>O que nossos <span class="highlight">clientes</span> dizem</h2>
+            <div class="section-header">
+                <h2>O que nossos <span class="highlight">clientes</span> dizem</h2>
+                <p>Confira a experiência de quem já transformou sua gestão com nossas soluções</p>
+            </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        <p>"O sistema da JM transformou nossa gestão. Agora temos controle total do negócio e nossa eficiência aumentou em 40%."</p>
+                        <p>"O sistema da JM transformou nossa gestão. Agora temos controle total do negócio e nossa eficiência aumentou em 40%. A integração com delivery foi fundamental para nosso crescimento."</p>
                     </div>
                     <div class="testimonial-author">
                         <strong>José Lourenço</strong>
@@ -151,11 +301,20 @@
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        <p>"A consultoria foi essencial para organizar nossos processos. O suporte é rápido e resolve qualquer problema."</p>
+                        <p>"A consultoria foi essencial para organizar nossos processos. O suporte é rápido e resolve qualquer problema. O sistema de delivery integrado aumentou nossas vendas em 60%."</p>
                     </div>
                     <div class="testimonial-author">
                         <strong>Ana Cristina</strong>
                         <span>BOMBONIERE DOCE DELICIA</span>
+                    </div>
+                </div>
+                <!-- <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>"Implementamos o ERP completo com sistema de delivery e os resultados foram impressionantes. Controle total do estoque, pedidos automatizados e relatórios precisos."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Carlos Eduardo</strong>
+                        <span>SUPERMERCADO VILA NOVA</span> -->
                     </div>
                 </div>
             </div>
@@ -165,11 +324,18 @@
     <!-- CTA Final -->
     <section class="cta" id="contato">
         <div class="container">
-            <h2>Pronto para <span class="highlight">transformar</span> sua gestão?</h2>
-            <p>Entre em contato agora mesmo e solicite uma demonstração gratuita</p>
-            <a href="https://wa.me/5582996834837?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20sistema%3F" class="btn-whatsapp">
-                <i class="fab fa-whatsapp"></i> WhatsApp da JM Sistemas
-            </a>
+            <div class="cta-content">
+                <h2>Pronto para <span class="highlight">transformar</span> sua gestão?</h2>
+                <p>Solicite uma demonstração gratuita e personalizada para o seu negócio</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/message/GL73J2GZFYFAN1" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> AGENDAR DEMONSTRAÇÃO
+                    </a>
+                    <a href="tel:5582996834837" class="btn-secondary">
+                        <i class="fas fa-phone-alt"></i> LIGAR AGORA
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -179,26 +345,41 @@
             <div class="footer-content">
                 <div class="footer-info">
                     <img src="assets/images/pngarte.png" alt="JM Sistemas" class="footer-logo">
-                    <p>Sistemas e Consultoria ERP especializada em pequenas e médias empresas.</p>
+                    <p>Sistemas e Consultoria ERP especializada em pequenas e médias empresas. Soluções completas para gestão empresarial inteligente.</p>
+                    <div class="footer-certificates">
+                        <span><i class="fas fa-check-circle"></i> 7+ anos de experiência</span>
+                        <span><i class="fas fa-check-circle"></i> +50 clientes satisfeitos</span>
+                        <span><i class="fas fa-check-circle"></i> Suporte especializado</span>
+                    </div>
                 </div>
                 <div class="footer-contact">
                     <h3>Contato</h3>
                     <p><i class="fab fa-whatsapp"></i> (82) 99683-4837</p>
                     <p><i class="far fa-envelope"></i> joaomoraes.analista@gmail.com</p>
+                    <p><i class="far fa-clock"></i> Seg - Sex: 8h às 18h</p>
                 </div>
                 <div class="footer-links">
-                    <h3>Links Rápidos</h3>
-                    <a href="#servicos">Serviços</a>
+                    <h3>Soluções</h3>
+                    <a href="#servicos">ERP Completo</a>
+                    <a href="#delivery">Sistema Delivery</a>
+                    <a href="#servicos">Emissão Fiscal</a>
+                    <a href="#servicos">PDV e Frente de Caixa</a>
+                    <a href="#servicos">Sites e E-commerce</a>
+                </div>
+                <div class="footer-links">
+                    <h3>Empresa</h3>
                     <a href="#diferenciais">Diferenciais</a>
                     <a href="#contato">Contato</a>
+                    <a href="#servicos">Serviços</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>Desenvolvido por <strong>JM Sistemas</strong> © 2025</p>
+                <p>Desenvolvido por <strong>JM Sistemas e Consultoria ERP</strong> © 2025 - Todos os direitos reservados</p>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/jmsistemaserp/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/joao-moraes-17239a230/"><i class="fab fa-linkedin"></i></a>
+                    <!-- <a href="https://www.linkedin.com/in/joao-moraes-17239a230/"><i class="fab fa-linkedin"></i></a>
                     <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a> -->
                 </div>
             </div>
         </div>
