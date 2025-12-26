@@ -188,18 +188,27 @@
                 </a>
             </div>
             
-            <div class="delivery-image">
-                <div class="mobile-device">
-                    <div class="mobile-screen">
-                        <div class="delivery-iframe-container">
-                            <!-- IFRAME com o site real -->
-                            <iframe src="https://preview.pedir.menu/" 
-                                    class="delivery-iframe" 
-                                    title="Preview do Sistema de Delivery"
-                                    loading="lazy"
-                                    sandbox="allow-scripts allow-same-origin">
-                            </iframe>
-                            
+                <!-- Substitua o iframe por isto: -->
+<div class="delivery-video-container">
+    <div class="mobile-device">
+        <div class="mobile-screen">
+            <div class="video-wrapper">
+                <video autoplay loop muted playsinline class="delivery-video">
+                    <source src="assets/videos/pedirmenu.mp4" type="video/mp4">
+                    
+                </video>
+                
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-frame">
+            <div class="mobile-notch"></div>
+            <div class="mobile-button"></div>
+        </div>
+    </div>
+</div>
                             <!-- BANNER DE COOKIES DENTRO DO IFRAME
                             <div class="cookie-banner-overlay">
                                 <div class="delivery-cookie-banner">
