@@ -31,7 +31,7 @@ body {
     color: var(--text);
     line-height: 1.6;
     overflow-x: hidden;
-    padding-top: 80px; /* ESPAÇO PARA O HEADER FIXO */
+    padding-top: 85px; /* ESPAÇO PARA O HEADER FIXO */
 }
 
 .container {
@@ -52,14 +52,14 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 15px 0;
+    padding: 20px 0;
     background: rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    height: 80px;
+    height: 85px;
     display: flex;
     align-items: center;
 }
@@ -90,7 +90,7 @@ header {
 /* Tamanhos responsivos para logo */
 @media (min-width: 1200px) {
     .logo {
-        height: 50px;
+        height: 75px;
     }
 }
 
@@ -107,8 +107,8 @@ header {
     }
     
     header {
-        height: 70px;
-        padding: 10px 0;
+        height: 75px;
+        padding: 15px 0;
     }
     
     .header-container {
@@ -130,12 +130,12 @@ header {
 
 @media (max-width: 480px) {
     body {
-        padding-top: 65px; /* ESPAÇO AINDA MENOR PARA MOBILE PEQUENO */
+        padding-top: 70px; /* ESPAÇO AINDA MENOR PARA MOBILE PEQUENO */
     }
     
     header {
-        height: 65px;
-        padding: 8px 0;
+        height: 70px;
+        padding: 12px 0;
     }
     
     .logo {
@@ -1283,7 +1283,7 @@ footer {
 
 @media (max-width: 768px) {
     .footer-logo {
-        height: 35px;
+        height: px;
         max-width: 150px;
     }
 }
@@ -1446,17 +1446,40 @@ footer {
 
 /* CORREÇÕES PARA SCROLL SUAVE - Evita que conteúdo seja cortado */
 section[id] {
-    scroll-margin-top: 80px; /* Mesma altura do header */
+    scroll-margin-top: 85px; /* Mesma altura do header */
 }
 
 @media (max-width: 768px) {
     section[id] {
-        scroll-margin-top: 70px; /* Ajustado para mobile */
+        scroll-margin-top: 75px; /* Ajustado para mobile */
     }
 }
 
 @media (max-width: 480px) {
     section[id] {
-        scroll-margin-top: 65px; /* Ajustado para mobile pequeno */
+        scroll-margin-top: 70px; /* Ajustado para mobile pequeno */
+    }
+}
+
+/* FORÇAR AUMENTO DA LOGO - ADICIONE NO FINAL DO ARQUIVO */
+.logo {
+    height: 55px !important; /* MUITO MAIOR */
+}
+
+@media (max-width: 992px) {
+    .logo {
+        height: 55px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        height: 55px !important;
+    }
+}
+
+@media (max-width: 368px) {
+    .logo {
+        height: 90px !important;
     }
 }

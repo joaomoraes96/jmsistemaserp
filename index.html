@@ -30,7 +30,7 @@
         </div>
         
         <nav class="mobile-nav">
-            <a href="#servicos">Serviços</a>
+            <a href="#servicos">Soluções</a>
             <a href="#delivery">Delivery</a>
             <a href="#diferenciais">Diferenciais</a>
             <a href="#contato">Contato</a>
@@ -199,12 +199,20 @@
                                     loading="lazy"
                                     sandbox="allow-scripts allow-same-origin">
                             </iframe>
-                            <!-- Overlay com link -->
-                            <div class="iframe-overlay">
-                                <a href="https://preview.pedir.menu/" target="_blank" rel="noopener">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Clique para ver em tela cheia</span>
-                                </a>
+                            
+                            <!-- BANNER DE COOKIES DENTRO DO IFRAME -->
+                            <div class="cookie-banner-overlay">
+                                <div class="delivery-cookie-banner">
+                                    <div class="delivery-cookie-text">
+                                        Este site utiliza cookies para oferecer a você a<br>
+                                        <strong>Aceitar Cookies</strong>
+                                        <a href="#" class="delivery-privacy-link">Política de Privacidade</a>
+                                    </div>
+                                    <button class="delivery-btn-accept" onclick="acceptDeliveryCookies()">Aceitar Cookies</button>
+                                    <div class="delivery-cookie-stamp">
+                                        [Política lírico] [Carimbo]
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -213,30 +221,113 @@
                         <div class="mobile-button"></div>
                     </div>
                 </div>
-                <button class="fullscreen-button" id="openDeliveryModal">
-                    <i class="fas fa-expand"></i> Visualizar em tela cheia
-                </button>
             </div>
         </div>
+        
+        <!-- CSS específico para o banner de cookies -->
+        <style>
+            .cookie-banner-overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                z-index: 1000;
+                background: rgba(255, 255, 255, 0.95);
+                border-top: 1px solid #ddd;
+                padding: 15px;
+            }
+            
+            .delivery-cookie-banner {
+                background-color: #f8f9fa;
+                border: 1px solid #ddd;
+                padding: 15px;
+                width: 100%;
+                text-align: center;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+                font-family: Arial, sans-serif;
+                margin: 0 auto;
+                max-width: 100%;
+            }
+            
+            .delivery-cookie-text {
+                margin-bottom: 10px;
+                font-size: 14px;
+                color: #555;
+                line-height: 1.5;
+            }
+            
+            .delivery-cookie-text strong {
+                color: #000;
+                font-size: 15px;
+                display: block;
+                margin: 8px 0;
+                font-weight: bold;
+            }
+            
+            .delivery-privacy-link {
+                color: #1a73e8;
+                text-decoration: none;
+                font-size: 13px;
+                display: block;
+                margin: 8px 0;
+            }
+            
+            .delivery-privacy-link:hover {
+                text-decoration: underline;
+            }
+            
+            .delivery-btn-accept {
+                background-color: #1a73e8;
+                color: white;
+                border: none;
+                padding: 12px 20px;
+                font-size: 15px;
+                font-weight: bold;
+                border-radius: 6px;
+                cursor: pointer;
+                display: block;
+                width: 100%;
+                margin: 10px 0;
+                transition: background-color 0.3s;
+            }
+            
+            .delivery-btn-accept:hover {
+                background-color: #0d62d9;
+            }
+            
+            .delivery-cookie-stamp {
+                font-size: 11px;
+                color: #888;
+                margin-top: 10px;
+                text-align: center;
+            }
+        </style>
+        
+        <script>
+            function acceptDeliveryCookies() {
+                const banner = document.querySelector('.delivery-cookie-banner');
+                if (banner) {
+                    banner.style.opacity = '0.7';
+                    banner.innerHTML = '<p style="padding: 15px; color: green; font-weight: bold;">✓ Cookies aceitos com sucesso!</p>';
+                    
+                    setTimeout(() => {
+                        banner.style.display = 'none';
+                    }, 2000);
+                }
+            }
+            
+            // Fechar banner ao clicar em "Política de Privacidade"
+            document.querySelectorAll('.delivery-privacy-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // Aqui você pode abrir um modal com a política ou redirecionar para uma página
+                    alert('Política de Privacidade do Sistema de Delivery');
+                });
+            });
+        </script>
     </div>
 </section>
-
-<!-- Modal para visualização em tela cheia -->
-<div class="delivery-modal" id="deliveryModal">
-    <div class="delivery-modal-content">
-        <div class="delivery-modal-header">
-            <h3><i class="fas fa-mobile-alt"></i> Preview do Sistema de Delivery</h3>
-            <button class="close-modal" id="closeDeliveryModal">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <iframe src="https://preview.pedir.menu/" 
-                class="delivery-modal-iframe" 
-                title="Sistema de Delivery - JM Sistemas"
-                allowfullscreen>
-        </iframe>
-    </div>
-</div>
 
     <!-- Seção Diferenciais -->
     <section class="features" id="diferenciais">
@@ -308,15 +399,6 @@
                         <span>BOMBONIERE DOCE DELICIA</span>
                     </div>
                 </div>
-                <!-- <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        <p>"Implementamos o ERP completo com sistema de delivery e os resultados foram impressionantes. Controle total do estoque, pedidos automatizados e relatórios precisos."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <strong>Carlos Eduardo</strong>
-                        <span>SUPERMERCADO VILA NOVA</span> -->
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -348,15 +430,15 @@
                     <p>Sistemas e Consultoria ERP especializada em pequenas e médias empresas. Soluções completas para gestão empresarial inteligente.</p>
                     <div class="footer-certificates">
                         <span><i class="fas fa-check-circle"></i> 7+ anos de experiência</span>
-                        <span><i class="fas fa-check-circle"></i> +50 clientes satisfeitos</span>
+                        <!-- <span><i class="fas fa-check-circle"></i> +50 clientes satisfeitos</span> -->
                         <span><i class="fas fa-check-circle"></i> Suporte especializado</span>
                     </div>
                 </div>
                 <div class="footer-contact">
                     <h3>Contato</h3>
-                    <p><i class="fab fa-whatsapp"></i> (82) 99683-4837</p>
-                    <p><i class="far fa-envelope"></i> joaomoraes.analista@gmail.com</p>
-                    <p><i class="far fa-clock"></i> Seg - Sex: 8h às 18h</p>
+                    <p><i class="fab fa-whatsapp"></i> (82) 98834-6145</p>
+                    <!-- <p><i class="far fa-envelope"></i> joaomoraes.analista@gmail.com</p>
+                    <p><i class="far fa-clock"></i> Seg - Sex: 8h às 18h</p> -->
                 </div>
                 <div class="footer-links">
                     <h3>Soluções</h3>
@@ -377,9 +459,6 @@
                 <p>Desenvolvido por <strong>JM Sistemas e Consultoria ERP</strong> © 2025 - Todos os direitos reservados</p>
                 <div class="social-icons">
                     <a href="https://www.instagram.com/jmsistemaserp/"><i class="fab fa-instagram"></i></a>
-                    <!-- <a href="https://www.linkedin.com/in/joao-moraes-17239a230/"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a> -->
                 </div>
             </div>
         </div>
