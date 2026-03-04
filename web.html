@@ -55,8 +55,8 @@
         }
         
         .logo {
-            max-width: 80px;
-            width: 50%;
+            max-width: 100px;
+            width: 100%;
             height: auto;
             filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
         }
@@ -155,23 +155,15 @@
             font-size: 0.9rem;
         }
         
-        .footer a {
-            color: #f59e0b;
-            text-decoration: none;
-        }
-        
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 40px 25px;
+        /* ===== VERSÃO RESPONSIVA MOBILE ===== */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 15px;
             }
             
-            .btn-sistema {
-                font-size: 1.3rem;
-                padding: 18px 40px;
+            .container {
+                padding: 40px 25px;
+                border-radius: 25px;
             }
             
             h1 {
@@ -180,12 +172,60 @@
             
             p {
                 font-size: 1rem;
+                margin-bottom: 30px;
+            }
+            
+            .btn-sistema {
+                font-size: 1.3rem;
+                padding: 18px 40px;
+                max-width: 100%;
+            }
+            
+            .btn-sistema i {
+                font-size: 1.5rem;
+            }
+            
+            .info-box {
+                padding: 20px;
+                margin-top: 30px;
+            }
+            
+            .info-item {
+                gap: 12px;
+                padding: 10px 0;
+            }
+            
+            .info-item i {
+                font-size: 1.2rem;
+                width: 25px;
+            }
+            
+            .info-item span {
+                font-size: 0.95rem;
             }
         }
         
-        @media (max-width: 480px) {
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
             .container {
                 padding: 30px 20px;
+                border-radius: 20px;
+            }
+            
+            .logo {
+                max-width: 80px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            p {
+                font-size: 0.95rem;
+                margin-bottom: 25px;
             }
             
             .btn-sistema {
@@ -194,7 +234,44 @@
             }
             
             .btn-sistema i {
-                font-size: 1.4rem;
+                font-size: 1.3rem;
+            }
+            
+            .info-item {
+                gap: 10px;
+            }
+            
+            .info-item i {
+                font-size: 1.1rem;
+                width: 22px;
+            }
+            
+            .info-item span {
+                font-size: 0.9rem;
+            }
+            
+            .footer {
+                font-size: 0.8rem;
+            }
+        }
+        
+        /* Ajuste para telas muito pequenas (ex: iPhone SE) */
+        @media screen and (max-width: 375px) {
+            .container {
+                padding: 25px 15px;
+            }
+            
+            .logo {
+                max-width: 180px;
+            }
+            
+            h1 {
+                font-size: 1.3rem;
+            }
+            
+            .btn-sistema {
+                font-size: 1.1rem;
+                padding: 14px 25px;
             }
         }
     </style>
@@ -212,7 +289,7 @@
         <!-- DESCRIÇÃO -->
         <p>Clique no botão abaixo para acessar o sistema</p>
 
-        <!-- BOTÃO PRINCIPAL - EDITAR APENAS O LINK AQUI -->
+        <!-- BOTÃO PRINCIPAL -->
         <a href="https://app.gdoorweb.com.br/" 
            class="btn-sistema" 
            id="btnSistema">
@@ -231,23 +308,46 @@
             </div>
             <div class="info-item">
                 <i class="fas fa-clock"></i>
-                <span>8:00 às 18:00</span>
+                <span>08:00 às 18:00</span>
             </div>
         </div>
 
         <!-- RODAPÉ -->
         <div class="footer">
-            © 2026 JM Sistemas e Consultoria ERP - Todos os direitos reservados
+            © 2026 JM Sistemas e Consultoria ERP
         </div>
     </div>
 
-    <!-- WhatsApp Flutuante (opcional) -->
-    <a href="https://wa.me/message/GL73J2GZFYFAN1" class="floating-whatsapp" style="position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: linear-gradient(135deg, #25D366, #128C7E); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; text-decoration: none; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); z-index: 999;">
+    <!-- WhatsApp Flutuante Responsivo -->
+    <a href="https://wa.me/message/GL73J2GZFYFAN1" class="floating-whatsapp" style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; background: linear-gradient(135deg, #25D366, #128C7E); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; text-decoration: none; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); z-index: 999; transition: all 0.3s ease;">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <style>
+        /* WhatsApp responsivo */
+        @media screen and (max-width: 768px) {
+            .floating-whatsapp {
+                width: 50px !important;
+                height: 50px !important;
+                font-size: 1.6rem !important;
+                bottom: 15px !important;
+                right: 15px !important;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .floating-whatsapp {
+                width: 45px !important;
+                height: 45px !important;
+                font-size: 1.4rem !important;
+                bottom: 10px !important;
+                right: 10px !important;
+            }
+        }
+    </style>
+
     <script>
-        // CONFIGURAÇÃO - MUDE APENAS ESTA LINHA
+        // CONFIGURAÇÃO - MUDE AQUI O LINK
         const LINK_DO_SISTEMA = "https://app.gdoorweb.com.br/";
         
         // Aplica o link ao botão
@@ -259,12 +359,8 @@
         
         // Feedback visual ao clicar
         btnSistema.addEventListener('click', function(e) {
-            // Mostra loading
             this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> CARREGANDO...';
-            this.style.pointerEvents = 'none'; // Evita cliques duplos
-            
-            // O link já vai redirecionar para a mesma aba
-            // Não precisa de setTimeout porque vai sair da página
+            this.style.pointerEvents = 'none';
         });
     </script>
 </body>
