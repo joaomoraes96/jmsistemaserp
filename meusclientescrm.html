@@ -688,9 +688,16 @@
         let clientes = [];
         
         function gerarCodigo() {
-            if (clientes.length === 0) return 1;
-            return Math.max(...clientes.map(c => c.codigo)) + 1;
+        if (!clientes || clientes.length === 0) {
+        return 1;
         }
+    
+        // Pega o maior código existente
+        const maioresCodigos = clientes.map(c => parseInt(c.codigo) || 0);
+        const maiorCodigo = Math.max(...maioresCodigos, 0);
+    
+        return maiorCodigo + 1;
+    }
         
         function abrirModal(cliente = null) {
             if (!logado) return;
@@ -727,39 +734,55 @@
         }
         
         function salvarCliente(event) {
-            event.preventDefault();
-            if (!logado) return;
-            
-            const cliente = {
-                id: document.getElementById('clienteId').value || Date.now().toString(),
-                codigo: parseInt(document.getElementById('codigo').value),
-                nome: document.getElementById('nome').value,
-                cpf: document.getElementById('cpf').value,
-                endereco: '',
-                telefone: document.getElementById('telefone').value,
-                email: document.getElementById('email').value,
-                tipoSistema: document.getElementById('tipoSistema').value,
-                valorLicenca: parseFloat(document.getElementById('valorLicenca').value) || 0,
-                valorMensal: parseFloat(document.getElementById('valorMensal').value) || 0,
-                vencimento: document.getElementById('vencimento').value,
-                pago: document.getElementById('pago').value,
-                regime: document.getElementById('regime').value,
-                qtdMaquinas: parseInt(document.getElementById('qtdMaquinas').value) || 1,
-                ativo: document.getElementById('ativo').value,
-                responsavel: document.getElementById('responsavel').value
-            };
+    event.preventDefault();
+    if (!logado) return;
+    
+    // PEGAR O ID (se existir)
+    const clienteId = document.getElementById('clienteId').value;
+    
+    // GERAR CÓDIGO AUTOMATICAMENTE SE FOR NOVO CLIENTE
+    let codigo = document.getElementById('codigo').value;
+    if (!clienteId || codigo === 'NaN' || codigo === '' || isNaN(parseInt(codigo))) {
+        codigo = gerarCodigo();
+    } else {
+        codigo = parseInt(codigo);
+    }
+    
+    // CRIAR OBJETO DO CLIENTE
+    const cliente = {
+        id: clienteId || Date.now().toString(),
+        codigo: codigo,
+        nome: document.getElementById('nome').value,
+        cpf: document.getElementById('cpf').value,
+        endereco: document.getElementById('endereco')?.value || '',
+        telefone: document.getElementById('telefone').value,
+        email: document.getElementById('email').value,
+        tipoSistema: document.getElementById('tipoSistema').value,
+        valorLicenca: parseFloat(document.getElementById('valorLicenca').value) || 0,
+        valorMensal: parseFloat(document.getElementById('valorMensal').value) || 0,
+        vencimento: document.getElementById('vencimento').value,
+        pago: document.getElementById('pago').value,
+        regime: document.getElementById('regime').value,
+        qtdMaquinas: parseInt(document.getElementById('qtdMaquinas').value) || 1,
+        ativo: document.getElementById('ativo').value,
+        responsavel: document.getElementById('responsavel').value
+    };
 
-            if (document.getElementById('clienteId').value) {
-                const index = clientes.findIndex(c => c.id === cliente.id);
-                if (index !== -1) clientes[index] = cliente;
-            } else {
-                clientes.push(cliente);
-            }
+    // VERIFICAR SE É EDIÇÃO OU NOVO
+    if (clienteId) {
+        // Editando cliente existente
+        const index = clientes.findIndex(c => c.id === cliente.id);
+        if (index !== -1) clientes[index] = cliente;
+    } else {
+        // Novo cliente
+        clientes.push(cliente);
+    }
 
-            salvarClientes();
-            atualizarTabela();
-            fecharModal();
-        }
+    // SALVAR E ATUALIZAR
+    salvarClientes();
+    atualizarTabela();
+    fecharModal();
+}
         
         function excluirCliente(id) {
             if (!logado) return;
