@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JM Sistemas - Acesso ao Sistema</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            animation: fadeIn 0.8s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .logo-container {
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            max-width: 80px;
+            width: 50%;
+            height: auto;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+        }
+        
+        h1 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .highlight {
+            color: #f59e0b;
+            font-weight: 700;
+        }
+        
+        p {
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .btn-sistema {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            background: linear-gradient(135deg, #1a56db, #059669);
+            color: white;
+            padding: 20px 50px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4);
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            max-width: 400px;
+            margin: 20px auto;
+            animation: pulse 2s infinite;
+        }
+        
+        .btn-sistema:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.5);
+            background: linear-gradient(135deg, #1e429f, #047857);
+        }
+        
+        .btn-sistema i {
+            font-size: 1.8rem;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(37, 99, 235, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+        }
+        
+        .info-box {
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 20px;
+            padding: 25px;
+            margin-top: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #cbd5e1;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        
+        .info-item i {
+            width: 30px;
+            color: #f59e0b;
+            font-size: 1.3rem;
+        }
+        
+        .info-item span {
+            font-size: 1rem;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        
+        .footer a {
+            color: #f59e0b;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 25px;
+            }
+            
+            .btn-sistema {
+                font-size: 1.3rem;
+                padding: 18px 40px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            .btn-sistema {
+                font-size: 1.2rem;
+                padding: 16px 30px;
+            }
+            
+            .btn-sistema i {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- LOGO PRINCIPAL -->
+        <div class="logo-container">
+            <img src="assets/images/logosemfundo.png" alt="JM Sistemas" class="logo">
+        </div>
+
+        <!-- TÍTULO -->
+        <h1>Acesse o <span class="highlight">Sistema Web</span></h1>
+        
+        <!-- DESCRIÇÃO -->
+        <p>Clique no botão abaixo para acessar o sistema</p>
+
+        <!-- BOTÃO PRINCIPAL - EDITAR APENAS O LINK AQUI -->
+        <a href="https://app.gdoorweb.com.br/" 
+           class="btn-sistema" 
+           id="btnSistema">
+            <i class="fas fa-rocket"></i> ACESSAR SISTEMA
+        </a>
+
+        <!-- INFORMAÇÕES ADICIONAIS -->
+        <div class="info-box">
+            <div class="info-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>Ambiente seguro e criptografado</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-headset"></i>
+                <span>Suporte: (82) 98834-6145</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <span>Disponível 24 horas</span>
+            </div>
+        </div>
+
+        <!-- RODAPÉ -->
+        <div class="footer">
+            © 2026 JM Sistemas e Consultoria ERP - Todos os direitos reservados
+        </div>
+    </div>
+
+    <!-- WhatsApp Flutuante (opcional) -->
+    <a href="https://wa.me/message/GL73J2GZFYFAN1" class="floating-whatsapp" style="position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: linear-gradient(135deg, #25D366, #128C7E); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; text-decoration: none; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); z-index: 999;">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // CONFIGURAÇÃO - MUDE APENAS ESTA LINHA
+        const LINK_DO_SISTEMA = "https://app.gdoorweb.com.br/";
+        
+        // Aplica o link ao botão
+        const btnSistema = document.getElementById('btnSistema');
+        btnSistema.href = LINK_DO_SISTEMA;
+        
+        // Remove target="_blank" para abrir na mesma aba
+        btnSistema.removeAttribute('target');
+        
+        // Feedback visual ao clicar
+        btnSistema.addEventListener('click', function(e) {
+            // Mostra loading
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> CARREGANDO...';
+            this.style.pointerEvents = 'none'; // Evita cliques duplos
+            
+            // O link já vai redirecionar para a mesma aba
+            // Não precisa de setTimeout porque vai sair da página
+        });
+    </script>
+</body>
+</html>
